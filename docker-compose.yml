@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  db:  
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypass
+      - POSTGRES_DB=myapp
+
+  pgadmin4:
+    image: fenglc/pgadmin4
+    ports:
+      - "5050:5050"
+    links:
+      - "db:database"
+

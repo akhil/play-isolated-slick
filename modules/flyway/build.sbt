@@ -8,7 +8,7 @@
 //$ export DB_DEFAULT_USER="sa"
 //$ export DB_DEFAULT_PASSWORD=""
 
-libraryDependencies += "org.flywaydb" % "flyway-core" % "4.0"
+libraryDependencies += "org.flywaydb" % "flyway-core" % "4.0.3"
 
 lazy val databaseUrl = sys.env.getOrElse("DB_DEFAULT_URL", "jdbc:postgresql://localhost:5432/myapp")
 lazy val databaseUser = sys.env.getOrElse("DB_DEFAULT_USER", "myuser")
